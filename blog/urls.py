@@ -8,9 +8,10 @@ urlpatterns = [
 ]
 
 from rest_framework.routers import DefaultRouter
-from blog.views import PostViewSet, CommentViewSet
+from blog.views import PostViewSet, CommentViewSet, PhoneViewSet
 
 router = DefaultRouter()
 router.register(r'blog', PostViewSet)
 router.register(r'comment', CommentViewSet)
+router.register(r'phone', PhoneViewSet)
 urlpatterns += router.urls

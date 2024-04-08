@@ -2,8 +2,8 @@ from rest_framework import status, viewsets
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from blog.models import Post, Comment
-from blog.serializers import PostSerializer, CommentSerializer
+from blog.models import Post, Comment, Phone
+from blog.serializers import PostSerializer, CommentSerializer, PhoneSerializer
 
 
 class PostList(APIView):
@@ -51,3 +51,11 @@ class CommentViewSet(viewsets.ModelViewSet):
     """
     queryset = Comment.objects.all()
     serializer_class = CommentSerializer
+
+
+class PhoneViewSet(viewsets.ModelViewSet):
+    """
+    A viewset for viewing and editing post instances.
+    """
+    queryset = Phone.objects.all()
+    serializer_class = PhoneSerializer
