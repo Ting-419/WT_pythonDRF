@@ -1,7 +1,6 @@
 from django.db import models
 
 from custom_user.models import User
-# from django.contrib.auth.models import User
 
 
 class Post(models.Model):
@@ -17,8 +16,8 @@ class Comment(models.Model):
 
 
 class Phone(models.Model):
-    post = models.ForeignKey(Post, related_name='phone', on_delete=models.CASCADE)
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user_phone')
+    post = models.ForeignKey(Post, related_name='phones', on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='user_phones')
     phone_number = models.CharField(max_length=20)
 
 

@@ -19,3 +19,9 @@ class PhoneSerializer(serializers.ModelSerializer):
     class Meta:
         model = Phone
         fields = ('id', 'post', 'user', 'phone_number')
+
+
+
+
+
+

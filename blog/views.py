@@ -59,3 +59,4 @@ class PhoneViewSet(viewsets.ModelViewSet):
     """
     queryset = Phone.objects.all()
     serializer_class = PhoneSerializer
+
